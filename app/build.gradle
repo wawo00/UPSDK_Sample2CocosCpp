@@ -7,7 +7,7 @@ android {
     buildToolsVersion '26.0.2'
 
     defaultConfig {
-        applicationId "roy.wan.foreign"
+        applicationId "adam.lean.foreign"
 //        applicationId "com.candy.world.crush.jam.free"
         minSdkVersion PROP_MIN_SDK_VERSION
         targetSdkVersion PROP_TARGET_SDK_VERSION
@@ -111,26 +111,17 @@ dependencies {
     compile(name: 'UPAdsSdk_CocosCpp_3.0.06_dex', ext: 'aar')
     //networks
     compile(name: 'adcolony_ads', ext: 'aar')
-    compile(name: 'amazon_ads', ext: 'aar')
     compile(name: 'applovin_ads', ext: 'aar')
-    compile(name: 'appnext_ads', ext: 'aar')
-    compile(name: 'appnext_core', ext: 'aar')
     compile(name: 'chartboost_ads', ext: 'aar')
+    compile(name: 'displayio_ads', ext: 'aar')
+    compile(name: 'facebook_exo_player', ext: 'aar')
+    compile(name: 'facebook_ads', ext: 'aar')
     compile(name: 'ironsource_ads', ext: 'aar')
     compile(name: 'mobvista_ads', ext: 'aar')
-    compile(name: 'tapjoy_ads', ext: 'aar')
+    compile(name: 'playable_ads', ext: 'aar')
     compile(name: 'unity_ads', ext: 'aar')
     compile(name: 'vungle_ads', ext: 'aar')
     compile(name: 'youappi_ads', ext: 'aar')
-    compile(name: 'facebook_exo_player', ext: 'aar')
-    compile(name: 'facebook_ads', ext: 'aar')
-
-    //dap
-    compile(name: 'dap_ads_cw', ext: 'aar')
-    compile(name: 'dap_ads_vd', ext: 'aar')
-//    compile(name: 'dap_ads', ext: 'aar')
-    compile(name: 'palette-v7-26.1.0', ext: 'aar')
-
 
    //support-libs
     compile(name: 'gson-2.7', ext: 'jar')
@@ -141,7 +132,5 @@ dependencies {
 
     //admob
     compile 'com.google.android.gms:play-services-ads:16.0.0'
-
-
 
 }
