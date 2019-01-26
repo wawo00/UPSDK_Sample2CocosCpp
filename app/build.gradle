@@ -111,7 +111,7 @@ dependencies {
     compile(name: 'UPAdsSdk_CocosCpp_3.0.06_dex', ext: 'aar')
     //networks
     compile(name: 'gdt_ads', ext: 'aar')
-    compile(name: 'mobvista_ads', ext: 'aar')
+    compile(name: 'mintegral_ads', ext: 'aar')
     compile(name: 'oneway_ads', ext: 'aar')
     compile(name: 'playable_ads', ext: 'aar')
     compile(name: 'toutiao_ads', ext: 'aar')
@@ -124,6 +124,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:26.1.0'
     compile 'com.android.support:multidex:1.0.1'
     compile 'com.android.support:recyclerview-v7:26.1.0'
-
+    compile 'com.android.support:customtabs:26.1.0'
 
 }
