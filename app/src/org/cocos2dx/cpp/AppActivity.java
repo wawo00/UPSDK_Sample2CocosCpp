@@ -23,8 +23,12 @@ THE SOFTWARE.
 ****************************************************************************/
 package org.cocos2dx.cpp;
 
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -34,6 +38,11 @@ import android.widget.Toast;
 import com.up.ads.UPAdsSdk;
 
 import org.cocos2dx.lib.Cocos2dxActivity;
+
+import static android.Manifest.permission.READ_PHONE_STATE;
+import static android.Manifest.permission.REQUEST_INSTALL_PACKAGES;
+import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
+
 public class AppActivity extends Cocos2dxActivity {
     int count=0;
     @Override
@@ -42,6 +51,19 @@ public class AppActivity extends Cocos2dxActivity {
 
         super.setEnableVirtualButton(false);
         super.onCreate(savedInstanceState);
+
+        //申请动态权限
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+
+            if (ContextCompat.checkSelfPermission(AppActivity.this, WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED
+                    || ContextCompat.checkSelfPermission(AppActivity.this, REQUEST_INSTALL_PACKAGES) != PackageManager.PERMISSION_GRANTED
+                    || ContextCompat.checkSelfPermission(AppActivity.this, READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions(AppActivity.this, new String[]{WRITE_EXTERNAL_STORAGE, REQUEST_INSTALL_PACKAGES, READ_PHONE_STATE}, 001);
+            }
+
+        }
+
+
         // Workaround in https://stackoverflow.com/questions/16283079/re-launch-of-activity-on-home-button-but-only-the-first-time/16447508
         if (!isTaskRoot()) {
             // Android launched another instance of the root activity into an existing task

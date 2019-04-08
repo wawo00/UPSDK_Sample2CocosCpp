@@ -108,7 +108,7 @@ dependencies {
     compile project(':libcocos2dx')
 
     //core-lib
-    compile(name: 'UPAdsSdk_CocosCpp_3.0.06_dex', ext: 'aar')
+    compile(name: 'UPAdsSdk_CocosCpp_3.0.07_dex', ext: 'aar')
     //networks
     compile(name: 'baidu_ads', ext: 'aar')
     compile(name: 'sigmob_ads', ext: 'aar')
@@ -124,6 +124,7 @@ dependencies {
 
 //support-libs
 //    compile(name: 'animated-vector-drawable-26.1.0', ext: 'aar')
+    compile(name: 'glide-3.7.0', ext: 'jar')
     compile(name: 'gson-2.7', ext: 'jar')
     compile 'com.android.support:support-v4:26.1.0'
     compile 'com.android.support:appcompat-v7:26.1.0'
