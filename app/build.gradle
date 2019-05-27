@@ -106,7 +106,7 @@ dependencies {
 //    compile fileTree(include: ['*.jar'], dir: 'libs')   //这句话不要有，要不会和网上compile下来的包产生冲突
     compile project(':libcocos2dx')
     //core-lib
-    compile(name: 'UPAdsSdk_CocosCpp_3.0.07_dex', ext: 'aar')
+    compile(name: 'UPAdsSdk_CocosCpp_3.0.07.4_dex', ext: 'aar')
     //networks
     compile(name: 'baidu_ads', ext: 'aar')
     compile(name: 'sigmob_ads', ext: 'aar')
