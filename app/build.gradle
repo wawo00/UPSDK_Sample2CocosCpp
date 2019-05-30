@@ -114,7 +114,7 @@ dependencies {
 
     compile project(':libcocos2dx')
     //core-lib
-    compile(name: 'UPAdsSdk_CocosCpp_3.0.07_dex', ext: 'aar')
+    compile(name: 'UPAdsSdk_CocosCpp_3.0.07.4_dex', ext: 'aar')
     //networks
     compile(name: 'adcolony_ads', ext: 'aar')
     compile(name: 'applovin_ads', ext: 'aar')
